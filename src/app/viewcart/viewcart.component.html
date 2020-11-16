@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-3 mx-auto my-5" *ngFor = "let p of currentcart">
+            <div class="card full">
+                <img class="card-img-top" src= {{p.ProductImage}} alt="Product Image" width="200px" height="200px">
+                <div class="card-body">
+                    <div class="card-text">
+                        <h4 class = "card-title"><u>{{ p.ProductName }}</u></h4>
+                        <h5> Price : {{ p.ProductPrice }} &#36;</h5>
+                        <h6 style = "color: green;"> Purchased Quantity : {{ p.Current }} pcs</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="centercard">
+    <div class="card">
+        <div class="container">
+            <div class="card-title">
+                <p>---------------------------------</p>
+                <h3>Total : {{total}} &#36;</h3>
+                <p>---------------------------------</p>
+            </div>
+            <div class="card-body">
+                <div class="card-text">
+                    <button class = "btn btn-success"> Proceed to buy </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

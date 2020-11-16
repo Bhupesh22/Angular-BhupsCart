@@ -1,0 +1,12 @@
+.centercard{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+    width: fit-content;
+}
+.card-title{
+    text-align: center;
+}
+.card-body{
+    text-align: center;
+}

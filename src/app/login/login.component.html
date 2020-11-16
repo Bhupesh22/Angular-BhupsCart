@@ -1,0 +1,35 @@
+<div class="card md-2" style = "width: 20rem;">
+    <div class="container">
+        <img src="./assets/avataar.png" class = "card-img-top" height="220px;" width="20px">
+    </div>
+    <div class="Container">
+        <div class="card body">
+            <form [formGroup] ="loginForm" (ngSubmit)="doLogin()">
+                <table>
+                    <tr>
+                        <td><label>Email-ID &nbsp;</label></td>
+                        <td>
+                            <input type="text"  formControlName="emailid" email  placeholder="example@abc.com" >
+                            <div *ngIf="!loginForm.get('mailid')?.valid && (loginForm.get('mailid')?.dirty || loginForm.get('mailid')?.touched)" class="error">
+                               <div *ngIf="loginForm.get('mailid').errors.required" >
+                                <small class="text-danger">Email is required</small> 
+                               </div>
+                               <div *ngIf="loginForm.get('mailid').errors.email">
+                                   <small class="text-danger">invalid email address</small>
+                               </div>
+                             </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label>Password &nbsp;</label></td>
+                        <td><input type="password"  formControlName="password" placeholder="Enter your password"></td>
+                    </tr>
+                    <tr>
+                        <td><button class="btn btn-success" type="submit">Login</button></td>
+                        <td><button class="btn btn-danger" type="reset" >Reset</button></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+</div>
